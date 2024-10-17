@@ -1,15 +1,26 @@
 {
   "name": "@superaihuman/spam-detector-sdk",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.1",
+  "module": "index.mjs",
+  "main": "src/index.js", 
   "keywords": ["spam-detector-sdk", "spam-filter", "spam check", "spam detection", "spam api", "spam-detector", "sdk", "superaihuman", "api"],
   "author": "Herschelle Lonare from Super Ai Human",
   "license": "MIT",
-  "description": "SDK to interact with SuperAIHuman's Spam Detector API",
+  "description": "SDK to interact with SuperAIHuman APIs",
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "jest"
+  },  
   "dependencies": {
-    "node-fetch": "^3.0.0"
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
+
