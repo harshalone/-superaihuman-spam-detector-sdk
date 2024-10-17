@@ -1,6 +1,6 @@
-const axios = require('axios');
+import axios from 'axios';
 
-function createClient({ apiKey, appId, baseURL = 'https://www.superaihumans.com/api' }) {
+export function createClient({ apiKey, appId, baseURL = 'https://www.superaihumans.com/api' }) {
   const client = axios.create({
     baseURL,
     headers: {
@@ -31,5 +31,3 @@ function handleError(error) {
     return new Error('Error setting up the request');
   }
 }
-
-module.exports = { createClient };
